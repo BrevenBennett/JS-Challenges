@@ -206,24 +206,24 @@
 
 // Q8 Reverse a String
 // function reverseString(str) {
-    // 3 Methods
+// 3 Methods
 
-    // 1. Incrementing Loop
-    // let reversedString = ''
-    // for (i = 0; i < str.length; ++i) {
-    //     reversedString = str[i] + reversedString
-    // }
-    // return reversedString
+// 1. Incrementing Loop
+// let reversedString = ''
+// for (i = 0; i < str.length; ++i) {
+//     reversedString = str[i] + reversedString
+// }
+// return reversedString
 
-    // 2. Decrementing Loop
-    // let reversedString = ''
-    // for (i = str.length - 1; i >= 0; --i) {
-    //     reversedString += str[i]
-    // }
-    // return reversedString
+// 2. Decrementing Loop
+// let reversedString = ''
+// for (i = str.length - 1; i >= 0; --i) {
+//     reversedString += str[i]
+// }
+// return reversedString
 
-    // 3. Array Reverse Property
-    // return str.split('').reverse().join('')
+// 3. Array Reverse Property
+// return str.split('').reverse().join('')
 // }
 
 // console.log(reverseString('abc'))
@@ -232,19 +232,19 @@
 
 // Q9 Turn every element in an array to 0
 // function convertToZeros(arr) {
-    // 3 Methods
-    // 1. For Loop
-    // let newArr = []
-    // for (i = 0; i < arr.length; ++i) {
-    //     newArr[i] = 0
-    // }
-    // return newArr
+// 3 Methods
+// 1. For Loop
+// let newArr = []
+// for (i = 0; i < arr.length; ++i) {
+//     newArr[i] = 0
+// }
+// return newArr
 
-    // 2. Array Fill
-    // return new Array(arr.length).fill(0)
-    
-    // 3. Array Map
-    // return arr.map(elem => 0)
+// 2. Array Fill
+// return new Array(arr.length).fill(0)
+
+// 3. Array Map
+// return arr.map(elem => 0)
 // }
 
 // console.log(convertToZeros([5, 100, 10]))
@@ -253,20 +253,59 @@
 
 // Q10 Filter out all the 'Apples'
 // function noApples(arr) {
-    // 2 Methods
-    // 1. For Loop
-    // let noApples = []
-    // for (i = 0; i < arr.length; ++i) {
-    //     if (arr[i] !== 'Apple') {
-    //         noApples.push(arr[i])
-    //     }
-    // }
-    // return noApples
+// 2 Methods
+// 1. For Loop
+// let noApples = []
+// for (i = 0; i < arr.length; ++i) {
+//     if (arr[i] !== 'Apple') {
+//         noApples.push(arr[i])
+//     }
+// }
+// return noApples
 
-    // 2. Array Filter
+// 2. Array Filter
 //     return arr.filter(elem => elem !== 'Apple')
 // }
 
 // console.log(noApples(['Banana', 'Apple', 'Orange', 'Apple']))
 // console.log(noApples(['Tomato', 'Orange', 'Banana']))
 // console.log(noApples(['Banana', 'Orange', 'Apple']))
+
+// Q11 Filter out falsy values
+// function filterOutFalsy(arr) {
+//     // 2 Methods
+//     // 1. For Loop
+//     let noFalsy = []
+//     for (i = 0; i < arr.length; ++i) {
+//         if (!!arr[i] === true) {
+//             noFalsy.push(arr[i])
+//         }
+//     }
+//     return noFalsy
+//     // 2. Array Filter
+//     // return arr.filter(elem => !!elem === true)
+// }
+
+// console.log(filterOutFalsy(["", [], 0, null, undefined, "0"]))
+// console.log(filterOutFalsy(['Tomato', 'Orange', 'Banana', false]))
+
+// Q12 Truthy to true, Falsy to false
+// function convertToBoolean(arr) {
+  // 2 Methods
+  // 1. For Loop
+  // let newArr = []
+  // for (i = 0; i < arr.length; ++i) {
+  //     if (!!arr[i] === true) {
+  //         newArr.push(true)
+  //     }
+  //     else if (!!arr[i] === false) {
+  //         newArr.push(false)
+  //     }
+  // }
+  // return newArr
+
+  // 2. Array Map
+//   return arr.map((elem) => !!elem)
+// }
+
+// console.log(convertToBoolean([500, 0, "David", "", []]));
