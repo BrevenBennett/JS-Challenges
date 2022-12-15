@@ -291,21 +291,89 @@
 
 // Q12 Truthy to true, Falsy to false
 // function convertToBoolean(arr) {
-  // 2 Methods
-  // 1. For Loop
-  // let newArr = []
-  // for (i = 0; i < arr.length; ++i) {
-  //     if (!!arr[i] === true) {
-  //         newArr.push(true)
-  //     }
-  //     else if (!!arr[i] === false) {
-  //         newArr.push(false)
-  //     }
-  // }
-  // return newArr
+// 2 Methods
+// 1. For Loop
+// let newArr = []
+// for (i = 0; i < arr.length; ++i) {
+//     if (!!arr[i] === true) {
+//         newArr.push(true)
+//     }
+//     else if (!!arr[i] === false) {
+//         newArr.push(false)
+//     }
+// }
+// return newArr
 
-  // 2. Array Map
+// 2. Array Map
 //   return arr.map((elem) => !!elem)
 // }
 
 // console.log(convertToBoolean([500, 0, "David", "", []]));
+
+//              ~~~~~~~~~~ADVANCED CHALLENGES~~~~~~~~~~
+// Q1 Show Rating
+// function showRating(rating) {
+//     let ratings = ""
+//     for (i = 0; i < Math.floor(rating); ++i) {
+//         ratings += "*"
+//         if (i !== Math.floor(rating) - 1) {
+//             ratings += " "
+//         }
+//     }
+//     if (!Number.isInteger(rating)) {
+//         ratings += " ."
+//     }
+//     return ratings
+// }
+
+// console.log(showRating(4.5));
+// console.log(showRating(2));
+
+// Q2 Sort by lowest to highest price
+// function sortLowToHigh(arr) {
+//   return arr.sort((a, b) => a - b);
+// }
+
+// console.log(sortLowToHigh([20, 40, 10, 30, 50, 10]));
+// console.log(sortLowToHigh([5, 10, 0, -5]));
+// console.log(sortLowToHigh([3, 2, 1, 0]));
+
+// Q3 Sort by lowest to highest price
+// function sortHighToLow(arr) {
+//   return arr.sort((a, b) => b.price - a.price);
+// }
+
+// console.log(
+//   sortHighToLow([
+//     { id: 1, price: 50 },
+//     { id: 2, price: 30 },
+//     { id: 3, price: 60 },
+//     { id: 4, price: 10 },
+//   ])
+// );
+
+// Q4 Find all the posts by a single user
+// async function postsByUser(userId) {
+//   const promise = await fetch("https://jsonplaceholder.typicode.com/posts");
+
+//   const result = await promise.json();
+
+//   const posts = result.filter((elem) => elem.userId === userId);
+
+//   console.log(posts);
+// }
+
+// postsByUser(4);
+
+// Q5 First 6 Incomplete Todos
+// async function first6Incomplete() {
+//   const promise = await fetch("https://jsonplaceholder.typicode.com/todos");
+
+//   const result = await promise.json();
+
+//   const incompleteTasks = result.filter((elem) => !elem.completed).slice(0, 6);
+
+//   console.log(incompleteTasks);
+// }
+
+// first6Incomplete();
